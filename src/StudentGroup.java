@@ -95,10 +95,10 @@ public class StudentGroup implements StudentArrayOperation {
 			throw new IllegalArgumentException();
 		}
 		else {
+		students.length--;
 			for(int i=index;i<students.length;i++) {
 				student[i]=student[i+1];
 			}
-			students.length--;
 		}
 	}
 
