@@ -35,11 +35,8 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void setStudents(Student[] students) {
 		// Add your implementation here
-		/*try {
-			for(int i=0;i<students.length;i++) {
-				students[i]=setId();
-			}
-		}*/
+		if(students==null)
+			throw new IllegalArgumentException();
 	}
 
 	@Override
@@ -171,7 +168,7 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student getNextStudent(Student student) {
 		// Add your implementation here
-		try {
+		/*try {
 			int flag=0,i;
 			for(i=0;i<students.length;i++) {
 				flag=students[i].compareTo(student);
@@ -182,6 +179,6 @@ public class StudentGroup implements StudentArrayOperation {
 			}
 		catch(IllegalArgumentException e) {
 			System.out.println(e);
-		}
+		}*/
 	}
 }
