@@ -73,8 +73,8 @@ public class StudentGroup implements StudentArrayOperation {
 	public void add(Student student, int index) {
 		// Add your implementation here
 		try {
-			students.length+=1;
-			for(int i=students.length-1;i>index;i--) {
+			students.length=students.length+1;
+			for(int i=students.length-1;i>index-1;i--) {
 				students[i]=students[i-1];
 			}
 			students[index]=student;
