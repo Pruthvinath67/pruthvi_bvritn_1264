@@ -35,6 +35,11 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void setStudents(Student[] students) {
 		// Add your implementation here
+		/*try {
+			for(int i=0;i<students.length;i++) {
+				students[i]=setId();
+			}
+		}*/
 	}
 
 	@Override
@@ -46,6 +51,12 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void setStudent(Student student, int index) {
 		// Add your implementation here
+		try {
+			students[index]=student;
+		}
+		catch(IllegalArgumentException e) {
+			System.out.println(e);
+		}
 	}
 
 	@Override
