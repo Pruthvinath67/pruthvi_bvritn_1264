@@ -20,13 +20,16 @@ public class StudentGroup implements StudentArrayOperation {
 	 * @param length
 	 */
 	public StudentGroup(int length) {
-		this.students = new Student[length]
+		this.students = new Student[length];
 	}
 
 	@Override
 	public Student[] getStudents() {
 		// Add your implementation here
-		return null;
+		if(students.length>0)
+			return students;
+		else
+			return null;
 	}
 
 	@Override
