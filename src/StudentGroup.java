@@ -175,7 +175,7 @@ public class StudentGroup implements StudentArrayOperation {
 			int flag=0,i;
 			for(i=0;i<students.length;i++) {
 				flag=students[i].compareTo(student);
-				if(flag==1) {
+				if(flag==1&&i<=students.length-1) {
 					return students[flag+1];
 				}
 			}
