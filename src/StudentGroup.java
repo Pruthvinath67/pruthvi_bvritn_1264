@@ -172,20 +172,16 @@ public class StudentGroup implements StudentArrayOperation {
 	public Student getNextStudent(Student student) {
 		// Add your implementation here
 		try {
-			int flag=0;
-			for(int i=0;i<students.length;i++) {
+			int flag=0,i;
+			for(i=0;i<students.length;i++) {
 				flag=students[i].compareTo(student);
-				if(flag==1)
-					break;
+				if(flag==1) {
+					return students[flag+1];
+				}
 			}
-			if(flag==1) {
-				return students[flag+1];
 			}
-			else
-				return null;
-		}
 		catch(IllegalArgumentException e) {
-		System.out.println(e);
+			System.out.println(e);
 		}
 	}
 }
